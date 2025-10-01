@@ -35,7 +35,7 @@ class Program
     }
     
     //Besides the Main(), we make a method that is our helping tool. This helps us determine our "hand" and thereby
-    //the result in our Main().
+    //the result in our Main()
     private static WinState GetWinState(Throw player1, Throw player2)
     //We declare the variable that does the calculation p2-p1 meaning the calculation of the result based on the hands
     {
