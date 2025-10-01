@@ -16,7 +16,7 @@ class Program
         }
     }
     
-    //Creates enum based on the options you can choose in the game. This is the first thing that is completed.
+    //Creates enum based on the options you can choose in the game. This is the first thing that is completed
     internal enum Throw
     {
         Rock,
