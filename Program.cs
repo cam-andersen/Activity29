@@ -1,9 +1,9 @@
-﻿//Vi opretter en Main() og en hjælper funktion der skal tjekke hvad vores hånd er
+﻿//We create a Main() function and a helping tool which will check our hand.
 class Program
 {
     static void Main(string[] args)
     {
-        //Inserts the code from Gôkce. 
+        //Inserts the code from Gôkce, given in the activity 29. 
         //++ means add another when running the code and refers to the enums. It is a kind of for-loop.
         for (var p1 = Throw.Spock; (int) p1 < 5; ++p1)
         {
@@ -16,7 +16,7 @@ class Program
         }
     }
     
-    //Creates enum based on the options you can choose in the game
+    //Creates enum based on the options you can choose in the game. This is the first thing that is completed.
     internal enum Throw
     {
         Rock,
@@ -25,7 +25,8 @@ class Program
         Lizard,
         Spock
     }
-    //As the outcomes are not Boolean, we create another enum
+    //As the outcomes are not Boolean (true or false), we create another enum with the three possible outcomes.
+    //This is the second thing that is completed.
     internal enum WinState
     {
         Tie,
@@ -33,21 +34,23 @@ class Program
         Loses
     }
     
-    //We make another method that is our helping tool.
+    //Besides the Main(), we make a method that is our helping tool. This helps us determine our "hand" and thereby
+    //the result in our Main().
     private static WinState GetWinState(Throw player1, Throw player2)
-    //declare variable that does the calculation p2-p1
+    //We declare the variable that does the calculation p2-p1 meaning the calculation of the result based on the hands
     {
         var Score = player2 - player1;
         switch (Score)
         {
-            //Lists all the cases based on the value that determines the result
+            //Lists all the cases based on the value that determines the result. These are the possible outcomes from
+            //the second enum
             case 0 :
                 return WinState.Tie;
             case -4 or -2 or 1 or 3:
                 return WinState.Wins;
             case -3 or -1 or 2 or 4:
                 return WinState.Loses;
-            //We create a default option if nonw of the above happens. This is an exception (add-on)
+            //We create a default option if none of the above happens. This is an exception (add-on)
             default:
                 throw new ArgumentOutOfRangeException();
         }
